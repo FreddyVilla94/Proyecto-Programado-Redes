@@ -22,7 +22,7 @@ def worker(*args):
         while True:
             datos = conn.recv(4096)
             if datos:
-                print('recibido: {}'.format(datos.decode('utf-8')))
+                print('Mensaje de {}\nAsunto: {}\n'.format(addr, datos.decode('utf-8')))
 
             else:
                 print("prueba")
