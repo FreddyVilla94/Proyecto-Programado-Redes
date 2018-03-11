@@ -2,11 +2,13 @@
 import socket
 import index
 
+host = "172.24.161.1"
+
 port = 6666
 
 sock = socket.socket()
 
-sock.connect((index.getHostIP(), port))
+sock.connect((host, port))
 
 datos = sock.recv(4096)
 print (datos.decode('utf-8'))

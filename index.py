@@ -10,3 +10,4 @@ def getHostIP():
     ipAddress = socket.gethostbyname(hostName)      # IP Address del Host
     return ipAddress
 
+print(getHostIP())
