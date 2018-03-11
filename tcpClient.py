@@ -2,9 +2,9 @@
 import socket
 import index
 
-host = "172.24.161.1"
+host = "172.24.161.178"
 
-port = 6666
+port = 9696
 
 sock = socket.socket()
 
@@ -18,7 +18,7 @@ print (datos.decode('utf-8'))
 while True:
 
 
-  message = input("envia un mensaje")
+  message = input("envia un mensaje: ")
   sock.send(message.encode('utf-8'))
 
 

@@ -3,13 +3,13 @@ import socket
 import threading
 import index
 
-port = 6666
+port = 9696
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print ("Socket Created")
 sock.bind((index.getHostIP(), port))
 print ("socket bind complete")
-sock.listen(1)
+sock.listen(20)
 print ("socket now listening")
 
 
