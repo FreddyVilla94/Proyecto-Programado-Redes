@@ -7,7 +7,7 @@ port = 9696
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print ("Socket Created")
-sock.bind((index.getHostIP(), port))
+sock.bind(("", port))
 print ("socket bind complete")
 sock.listen(20)
 print ("socket now listening")
@@ -17,8 +17,8 @@ def worker(*args):
     conn = args[0]
     addr = args[1]
     try:
-        print('conexion con {}.'.format(addr))
-        conn.send("server: Hello client".encode('UTF-8'))
+        print('conexion con %s:%s.'%(addr[0],addr[1]))
+        conn.send("server: Hello client %s:%s".encode('UTF-8'))
         while True:
             datos = conn.recv(4096)
             if datos:

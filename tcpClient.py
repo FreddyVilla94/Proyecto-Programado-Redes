@@ -2,7 +2,7 @@
 import socket
 import index
 
-host = "172.24.161.178"
+host = "172.24.161.1"
 
 port = 9696
 
@@ -25,6 +25,8 @@ while True:
 
 
   if message == "quit":
+    sock.send("Bye".encode('utf-8'))
     break
-    print("bye")
-    sock.close()
+
+print("bye")
+sock.close()
